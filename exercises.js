@@ -72,8 +72,8 @@ var stringOfNumbers = "";
 
 for(i=10;i<21;i++){
   stringOfNumbers+=i;
-  console.log(stringOfNumbers);
 }
+console.log(stringOfNumbers);
 /* 5) Even Stevens
 Declare a variable named `evenNumArr` and assign its value to an empty array. 
 
@@ -82,19 +82,26 @@ Console.log your results.
 */
 var evenNumArr = [];
 
-for(i=0;i<50;i++){
+for(i=0;i<100;i++){
   if(i%2===0){
     evenNumArr.push(i);
   }
-  console.log(i);
 }
+console.log(evenNumArr);
 /* 6) Up the Odds
 Declare a variable named `oddSum` and assign it to the Number value 0.
 
 Write a for-loop that will sum up odd numbers to the `oddSum` variable. We want to add 50 odd numbers starting from 1.
 Console.log your results.
 */
-  
+var oddSum = 0;
+
+for(i=1;i<100;i++){
+  if(i%2===1){
+    oddSum+=i;
+}
+}
+console.log(oddSum);
 
 /* 7) Oops There It is
 Declare a variable named `oopsArray` and assign its to the following array: `[ 'turn' , , 'down' , , 'for' , , 'what' ]`.
@@ -102,7 +109,14 @@ Note that every odd index value in `oopsArray` is currently `undefined`. Using a
 
 [ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]
 */
+var oopsArray = ['turn',,'down',,'for',,'what'];
 
+for(i=0;i<oopsArray.length;i++){
+  if(i%2===1){
+    oopsArray[i]='nope';
+  }
+console.log(oopsArray[i]);
+}
 
 /* 8) Is It There Oops
 Using a for-loop, iterate through the Array stored at `oopsArray` backwards. Console.log your result. It should look like this:
@@ -115,7 +129,10 @@ down
 nope
 turn
 */
-
+// for(i=0;i<oopsArray.length;i++){
+//   oopsArray.reverse;
+// }
+// console.log(oopsArray);
 
 /* 9) Siesta Time
 Declare a variable named `napSchedule` and assign its value to the following array: `[false, false, true, false, true, true]`
@@ -126,8 +143,18 @@ Next, write a function named `nap`. This function takes in a single parameter: `
 
 Inside of this function write a for-loop that will iterate through the `napSchedule` array and console.log the message: `ZzZzZzZz` if the schedule is `true`, otherwise the it will console.log the message: `Gotta get coding!` if the schedule is `false`.
 */
+// var napSchedule = [false,false,true,false,true,true];
 
-
+// function nap(schedule){
+//   for(i=0;i<schedule.length;i++){
+//     if(schedule[i]=true){
+//       return 'ZzZzZzZz';
+//     }else{
+//       return 'Gotta get coding!';
+//     }
+//     }
+// }
+// nap(napSchedule[i]);
 
 /* 10) Copy Pasta
 Declare a variable named `valuesArray` and assign its value to be an array: `[99, 66, 829, 1941, 8, 76]`. 
@@ -140,8 +167,16 @@ Write a function named `copyArray` which takes two arguments: `originArray` and 
 
 Inside of this function write a for-loop that will iterate through the contents of the `originArray` and pushes each element of that array into `destinationArray`. Console.log your result.
 */
+var valuesArray = [99, 66, 829, 1941, 8, 76];
+var copyValuesArray = [];
 
-
+function copyArray(originArray,destinationArray){
+  for(i=0;i<originArray.length;i++){
+    destinationArray=originArray[i];
+    console.log(destinationArray);
+  } 
+}
+copyArray(valuesArray,copyValuesArray);
 
 /*Final Boss*/
 
