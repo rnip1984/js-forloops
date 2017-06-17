@@ -9,7 +9,7 @@ Write a for-loop that will iterate through 20 numbers (starting at 1 and ending 
 "Now serving 20."
 */
 for(i=1;i<21;i++){
-  console.log("Now serving",(i));
+  console.log("Now serving "+(i));
 }
 
 /* 2) Pop Charts
@@ -25,7 +25,7 @@ var topFive = ["Closer", "Starboy", "I Feel It Coming", "Let Me Love You", "24K 
 
 function PopCharts(coolSongs){
   for(i=0;i<coolSongs.length;i++){
-    console.log("This week's chart buster is:",coolSongs[i]);
+    console.log("This week's chart buster is: " + coolSongs[i]);
 }
 }
 
@@ -45,8 +45,7 @@ Next, console.log the length of the array.
 var Presidents = ["Washington","Adams","Jefferson","Madison","Monroe"];
 
 for(i=0;i<Presidents.length;i++){
-  var position = 0;
-  console.log("The value at ",i," is ", Presidents[i]);
+  console.log("The value at "+i+" is "+ Presidents[i]);
 }
 console.log(Presidents.length);
 /*
@@ -133,6 +132,7 @@ turn
 //   oopsArray.reverse;
 // }
 // console.log(oopsArray);
+for (var i=oopsArray.length-1; i>=0; i--)
 
 /* 9) Siesta Time
 Declare a variable named `napSchedule` and assign its value to the following array: `[false, false, true, false, true, true]`
